@@ -1,0 +1,90 @@
+.typing{
+ 
+    height: 90px;
+    line-height: 90px;
+    font-size: 60px;
+     overflow: hidden; 
+
+}
+body{
+
+    overflow-x: hidden;
+}
+.typing li{
+    position: relative;
+    top: 0;
+    list-style: none;
+    font-size: 57px;
+    animation:  slide 6s steps(4) infinite;
+
+    
+}
+@keyframes slide {
+    100%{
+        
+        top: -360px;
+    }
+    
+}
+.typing li span{
+    position: relative;
+    margin: 10px 0px;
+
+}
+.typing li span::after{
+    content: "";
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid #000;
+   
+    background: #fff;
+    animation:  typing 1.5s steps(10) infinite;
+
+}
+
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -40px 0 35px;
+    }
+    0%{
+        left: 0;
+        margin: 0;
+    }
+    
+}
+    
+.gd{
+
+    display: grid;
+    grid-template-columns: 500px auto;
+}
+
+.container{
+
+    margin: 0 auto;
+    overflow-x: hidden;
+    border: 1px solid red;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.slider{
+    display: flex;
+    cursor: grab;
+   
+}
+.items{
+    
+    max-width: 30rem;
+    padding: 2rem;
+    height: 40rem;
+
+}
+.items img{
+    height: 100%;
+   
+    width: 100%;
+    pointer-events: none;
+}
